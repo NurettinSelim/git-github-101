@@ -175,14 +175,43 @@ if __name__ == "__main__":
     print("\n1. WORD/PHRASE PALINDROME CHECKING")
     print("-" * 60)
     test_phrases = [
+        # Classic palindromes
         "racecar",
+        "level",
+        "kayak",
+        "deified",
+        "rotator",
+
+        # Famous phrase palindromes
         "A man a plan a canal Panama",
         "Was it a car or a cat I saw?",
-        "hello world",
-        "Madam",
+        "Never odd or even",
+        "Do geese see God?",
+        "Madam, I'm Adam",
+        "Mr. Owl ate my metal worm",
         "No lemon, no melon",
-        "test case 1",
+        "A Santa at NASA",
+        "Step on no pets",
+
+        # Single words
+        "Madam",
+        "radar",
+        "civic",
+        "refer",
+
+        # Edge cases
+        "a",
+        "aa",
+        "ab",
+
+        # Mixed alphanumeric
         "12321",
+        "A1B2B1A",
+
+        # NOT palindromes
+        "hello world",
+        "test case 1",
+        "python",
     ]
 
     for phrase in test_phrases:
@@ -192,7 +221,27 @@ if __name__ == "__main__":
     # Test 2: Number Palindromes
     print("\n2. NUMBER PALINDROME CHECKING")
     print("-" * 60)
-    test_numbers = [12321, 12345, 11111, 123454321, 100]
+    test_numbers = [
+        # Palindrome numbers
+        0,
+        1,
+        7,
+        11,
+        121,
+        1221,
+        12321,
+        123321,
+        11111,
+        123454321,
+        9009,
+
+        # NOT palindromes
+        10,
+        100,
+        12345,
+        987654,
+        1234567890,
+    ]
 
     for num in test_numbers:
         result = is_number_palindrome(num)
@@ -202,11 +251,21 @@ if __name__ == "__main__":
     print("\n3. STRICT PALINDROME CHECKING (exact matching)")
     print("-" * 60)
     strict_tests = [
+        # Strict palindromes (exact match)
         "racecar",
-        "Racecar",
-        "a b a",
+        "noon",
         "aba",
-        "noon"
+        "a b a",
+        "12321",
+        "!!!",
+        "...",
+
+        # NOT strict palindromes
+        "Racecar",          # Different case
+        "A man",            # Not a palindrome at all
+        "race car",         # Has space in middle
+        "a b c b a",        # Has spaces but is palindrome
+        "Madam",            # Different case
     ]
 
     for text in strict_tests:
@@ -219,7 +278,11 @@ if __name__ == "__main__":
     search_texts = [
         "racecar",
         "abba noon level",
-        "python"
+        "The racecar driver saw a kayak at noon",
+        "madam and dad saw a civic",
+        "python programming",
+        "aabbccbbaa",
+        "12321 and 454",
     ]
 
     for text in search_texts:
@@ -233,7 +296,19 @@ if __name__ == "__main__":
     # Test 5: Generate Palindromes
     print("\n5. GENERATE PALINDROMES")
     print("-" * 60)
-    words = ["hello", "python", "code", "a"]
+    words = [
+        "hello",
+        "python",
+        "code",
+        "a",
+        "ab",
+        "abc",
+        "test",
+        "race",
+        "mom",
+        "data",
+        "AI",
+    ]
 
     for word in words:
         generated = generate_palindrome(word)
