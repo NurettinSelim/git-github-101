@@ -110,7 +110,6 @@ def find_palindromes(text, min_length=3):
     for i in range(n):
         for j in range(i + min_length, n + 1):
             substring = text_lower[i:j]
-            # Only check alphanumeric substrings
             if substring.isalnum() and substring == substring[::-1]:
                 palindromes.add(text[i:j])  # Add original case version
 
@@ -181,7 +180,9 @@ if __name__ == "__main__":
         "Was it a car or a cat I saw?",
         "hello world",
         "Madam",
-        "No lemon, no melon"
+        "No lemon, no melon",
+        "test case 1",
+        "12321",
     ]
 
     for phrase in test_phrases:
