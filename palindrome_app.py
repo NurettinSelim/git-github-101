@@ -223,24 +223,16 @@ if __name__ == "__main__":
     print("-" * 60)
     test_numbers = [
         # Palindrome numbers
-        0,
-        1,
         7,
         11,
         121,
-        1221,
         12321,
-        123321,
-        11111,
         123454321,
         9009,
 
         # NOT palindromes
         10,
-        100,
         12345,
-        987654,
-        1234567890,
     ]
 
     for num in test_numbers:
