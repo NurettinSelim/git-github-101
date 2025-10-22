@@ -278,7 +278,11 @@ if __name__ == "__main__":
     search_texts = [
         "racecar",
         "abba noon level",
-        "python"
+        "The racecar driver saw a kayak at noon",
+        "madam and dad saw a civic",
+        "python programming",
+        "aabbccbbaa",
+        "12321 and 454",
     ]
 
     for text in search_texts:
@@ -292,7 +296,19 @@ if __name__ == "__main__":
     # Test 5: Generate Palindromes
     print("\n5. GENERATE PALINDROMES")
     print("-" * 60)
-    words = ["hello", "python", "code", "a"]
+    words = [
+        "hello",
+        "python",
+        "code",
+        "a",
+        "ab",
+        "abc",
+        "test",
+        "race",
+        "mom",
+        "data",
+        "AI",
+    ]
 
     for word in words:
         generated = generate_palindrome(word)
